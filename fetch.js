@@ -5,8 +5,8 @@ const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${process.env.API_KEY}`,
-      'HTTP-Referer': 'https://yourdomain.com', // optional but recommended
-      'X-Title': 'Your App Name',               // optional
+      'HTTP-Referer': 'https://domain.com', 
+      'X-Title': 'Name',              
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -17,7 +17,7 @@ const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
           content: 'What is the meaning of life?',
         },
       ],
-      max_tokens: 256, // prevents over-budgeting
+      max_tokens: 256, 
     }),
   });
   
